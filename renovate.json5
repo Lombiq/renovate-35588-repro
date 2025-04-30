@@ -1,0 +1,17 @@
+{
+    '$schema': 'https://docs.renovatebot.com/renovate-schema.json',
+    extends: [
+        'config:recommended',
+        ':enableVulnerabilityAlerts',
+        'docker:pinDigests',
+        'helpers:pinGitHubActionDigests',
+        ':pinDevDependencies'
+    ],
+    configMigration: true,
+    dependencyDashboard: false,
+    prHourlyLimit: 0,
+    // Between 0:00 and 6:59 UTC on Sundays.
+    schedule: [
+        '* 0-6 * * 7',
+    ],
+}
