@@ -7,11 +7,5 @@
         'helpers:pinGitHubActionDigests',
         ':pinDevDependencies'
     ],
-    configMigration: true,
-    dependencyDashboard: true,
-    prHourlyLimit: 0,
-    // Between 0:00 and 6:59 UTC on Sundays.
-    schedule: [
-        '* 0-6 * * 7',
-    ],
+    dependencyDashboard: false,
 }
